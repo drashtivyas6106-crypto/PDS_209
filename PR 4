@@ -1,0 +1,239 @@
+mport numpy as np
+import pandas as pd
+
+print("NUMPY AND PANDAS DEMONSTRATION")
+print("--------------------------------")
+
+# ------------------------------------------
+# 1. Creating NumPy Arrays
+# ------------------------------------------
+
+arr1 = np.array([10, 20, 30, 40, 50])
+arr2 = np.array([5, 4, 3, 2, 1])
+
+print("\nArray 1 :", arr1)
+print("Array 2 :", arr2)
+
+# ------------------------------------------
+# 2. Array Arithmetic
+# ------------------------------------------
+
+print("\nArray Arithmetic")
+print("Addition :", arr1 + arr2)
+print("Subtraction :", arr1 - arr2)
+print("Multiplication :", arr1 * arr2)
+print("Division :", arr1 / arr2)
+
+# ------------------------------------------
+# 3. Array Properties
+# ------------------------------------------
+
+print("\nArray Properties")
+print("Dimension :", arr1.ndim)
+print("Shape :", arr1.shape)
+print("Size :", arr1.size)
+print("Data Type :", arr1.dtype)
+
+# ------------------------------------------
+# 4. Matrix Creation
+# ------------------------------------------
+
+matrix = np.array([
+    [10,20,30],
+    [40,50,60],
+    [70,80,90]
+])
+
+print("\nMatrix")
+print(matrix)
+
+# ------------------------------------------
+# 5. Indexing and Slicing
+# ------------------------------------------
+
+print("\nIndexing")
+print(matrix[0,0])
+print(matrix[2,1])
+
+print("\nSlicing")
+print(matrix[0:2,1:3])
+
+# ------------------------------------------
+# 6. Special Arrays
+# ------------------------------------------
+
+print("\nZeros Matrix")
+print(np.zeros((3,3)))
+
+print("\nOnes Matrix")
+print(np.ones((2,4)))
+
+print("\nIdentity Matrix")
+print(np.eye(4))
+
+# ------------------------------------------
+# 7. Random Numbers
+# ------------------------------------------
+
+random_array = np.random.randint(1,100,10)
+
+print("\nRandom Array")
+print(random_array)
+
+# ------------------------------------------
+# 8. Statistical Functions
+# ------------------------------------------
+
+print("\nStatistics")
+print("Maximum :", np.max(random_array))
+print("Minimum :", np.min(random_array))
+print("Sum :", np.sum(random_array))
+print("Mean :", np.mean(random_array))
+print("Median :", np.median(random_array))
+print("Standard Deviation :", np.std(random_array))
+
+# ------------------------------------------
+# 9. Reshape
+# ------------------------------------------
+
+numbers = np.arange(1,13)
+
+print("\nOriginal")
+print(numbers)
+
+print("\nReshape")
+print(numbers.reshape(3,4))
+
+# ------------------------------------------
+# 10. Pandas Series
+# ------------------------------------------
+
+series = pd.Series([100,200,300,400],
+                   index=["A","B","C","D"])
+
+print("\nSeries")
+print(series)
+
+# ------------------------------------------
+# 11. DataFrame
+# ------------------------------------------
+
+student = {
+    "Name":["Deep","Rahul","sarthi","heet","Karan"],
+    "Age":[20,21,20,22,21],
+    "Marks":[85,76,92,88,79],
+    "City":["Surat","Ahmedabad","Rajkot","Vadodara","Surat"]
+}
+
+df = pd.DataFrame(student)
+
+print("\nStudent DataFrame")
+print(df)
+
+# ------------------------------------------
+# 12. Information
+# ------------------------------------------
+
+print("\nShape :", df.shape)
+print("Columns :", df.columns.tolist())
+
+print("\nData Types")
+print(df.dtypes)
+
+# ------------------------------------------
+# 13. Head and Tail
+# ------------------------------------------
+
+print("\nFirst Three Rows")
+print(df.head(3))
+
+print("\nLast Two Rows")
+print(df.tail(2))
+
+# ------------------------------------------
+# 14. Selecting Columns
+# ------------------------------------------
+
+print("\nNames")
+print(df["Name"])
+
+print("\nMarks")
+print(df["Marks"])
+
+# ------------------------------------------
+# 15. Filtering
+# ------------------------------------------
+
+print("\nStudents having Marks > 80")
+print(df[df["Marks"]>80])
+
+# ------------------------------------------
+# 16. Sorting
+# ------------------------------------------
+
+print("\nSort by Marks")
+print(df.sort_values("Marks"))
+
+# ------------------------------------------
+# 17. Add New Column
+# ------------------------------------------
+
+df["Result"] = ["Pass","Pass","Pass","Pass","Pass"]
+
+print("\nUpdated DataFrame")
+print(df)
+
+# ------------------------------------------
+# 18. Average Marks
+# ------------------------------------------
+
+print("\nAverage Marks")
+print(df["Marks"].mean())
+
+# ------------------------------------------
+# 19. Maximum & Minimum
+# ------------------------------------------
+
+print("\nHighest Marks")
+print(df["Marks"].max())
+
+print("\nLowest Marks")
+print(df["Marks"].min())
+
+# ------------------------------------------
+# 20. Group By
+# ------------------------------------------
+
+print("\nAverage Marks City Wise")
+print(df.groupby("City")["Marks"].mean())
+
+# ------------------------------------------
+# 21. Missing Values
+# ------------------------------------------
+
+df.loc[2,"Marks"] = np.nan
+
+print("\nMissing Value Added")
+print(df)
+
+print("\nMissing Values")
+print(df.isnull().sum())
+
+print("\nFill Missing Value")
+df["Marks"] = df["Marks"].fillna(df["Marks"].mean())
+
+print(df)
+
+# ------------------------------------------
+# 22. Export CSV
+# ------------------------------------------
+
+df.to_csv("student_data.csv", index=False)
+
+print("\nCSV File Created Successfully")
+
+# ------------------------------------------
+# END
+# ------------------------------------------
+
+print("\nPart 2 Completed Successfully.")
