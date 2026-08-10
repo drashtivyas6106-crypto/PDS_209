@@ -1,0 +1,234 @@
+1. Print Statement
+# ------------------------------------------
+
+print("WELCOME TO APPLIED DATA SCIENCE WITH PYTHON")
+print("-------------------------------------------")
+
+# ------------------------------------------
+# 2. Variables
+# ------------------------------------------
+
+name = "Sarthi"
+course = "Applied Data Science"
+age = 19
+fees = 15000.50
+completed = True
+
+print("\nStudent Information")
+print("Name :", name)
+print("Course :", course)
+print("Age :", age)
+print("Fees :", fees)
+print("Completed :", completed)
+
+# ------------------------------------------
+# 3. Data Types
+# ------------------------------------------
+
+print("\nData Types")
+print(type(name))
+print(type(age))
+print(type(fees))
+print(type(completed))
+
+# ------------------------------------------
+# 4. Arithmetic Operators
+# ------------------------------------------
+
+a = 25
+b = 10
+
+print("\nArithmetic Operators")
+print("Addition =", a + b)
+print("Subtraction =", a - b)
+print("Multiplication =", a * b)
+print("Division =", a / b)
+print("Floor Division =", a // b)
+print("Modulus =", a % b)
+print("Power =", a ** b)
+
+# ------------------------------------------
+# 5. Comparison Operators
+# ------------------------------------------
+
+print("\nComparison Operators")
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+print(a >= b)
+print(a <= b)
+
+# ------------------------------------------
+# 6. Logical Operators
+# ------------------------------------------
+
+x = True
+y = False
+
+print("\nLogical Operators")
+print("AND :", x and y)
+print("OR :", x or y)
+print("NOT :", not x)
+
+# ------------------------------------------
+# 7. String Operations
+# ------------------------------------------
+
+language = "Python"
+
+print("\nString Operations")
+print("Upper :", language.upper())
+print("Lower :", language.lower())
+print("Length :", len(language))
+print("First Character :", language[0])
+print("Last Character :", language[-1])
+print("Repeat :", language * 2)
+
+# ------------------------------------------
+# 8. List
+# ------------------------------------------
+
+marks = [78, 85, 90, 88, 95]
+
+print("\nOriginal List")
+print(marks)
+
+marks.append(80)
+marks.insert(2, 100)
+
+print("Updated List")
+print(marks)
+
+print("Maximum =", max(marks))
+print("Minimum =", min(marks))
+print("Sum =", sum(marks))
+print("Average =", sum(marks)/len(marks))
+
+# ------------------------------------------
+# 9. Tuple
+# ------------------------------------------
+
+colors = ("Red", "Blue", "Green", "Black")
+
+print("\nTuple")
+print(colors)
+print("First =", colors[0])
+
+# ------------------------------------------
+# 10. Set
+# ------------------------------------------
+
+numbers = {10,20,30,20,10,40}
+
+print("\nSet")
+print(numbers)
+
+numbers.add(50)
+print(numbers)
+
+# ------------------------------------------
+# 11. Dictionary
+# ------------------------------------------
+
+student = {
+    "Name":"Deep",
+    "Age":20,
+    "City":"Surat",
+    "Course":"Data Science"
+}
+
+print("\nDictionary")
+print(student)
+
+print(student["Name"])
+print(student["Course"])
+
+student["Age"] = 21
+
+print(student)
+
+# ------------------------------------------
+# 12. If Else
+# ------------------------------------------
+
+marks = 82
+
+print("\nResult")
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 50:
+    print("Grade C")
+else:
+    print("Fail")
+
+# ------------------------------------------
+# 13. For Loop
+# ------------------------------------------
+
+print("\nFor Loop")
+
+for i in range(1,6):
+    print(i)
+
+# ------------------------------------------
+# 14. While Loop
+# ------------------------------------------
+
+print("\nWhile Loop")
+
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+
+# ------------------------------------------
+# 15. Functions
+# ------------------------------------------
+
+def square(num):
+    return num*num
+
+print("\nFunction Example")
+print(square(9))
+
+# ------------------------------------------
+# 16. Lambda Function
+# ------------------------------------------
+
+cube = lambda x: x**3
+
+print("\nLambda Function")
+print(cube(4))
+
+# ------------------------------------------
+# 17. List Comprehension
+# ------------------------------------------
+
+square_list = [i*i for i in range(1,11)]
+
+print("\nList Comprehension")
+print(square_list)
+
+# ------------------------------------------
+# 18. Exception Handling
+# ------------------------------------------
+
+print("\nException Handling")
+
+try:
+    num = 10
+    result = num / 2
+    print(result)
+except:
+    print("Error")
+
+# ------------------------------------------
+# END OF PART 1
+# ------------------------------------------
+
+print("\nPart 1 Completed Successfully.")
