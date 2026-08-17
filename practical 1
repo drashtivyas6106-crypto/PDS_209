@@ -1,0 +1,48 @@
+a = 10
+b = 3
+
+# Arithmetic
+print("Arithmetic Operators")
+print("a + b =", a + b)
+print("a - b =", a - b)
+print("a * b =", a * b)
+print("a / b =", a / b)
+print("a // b =", a // b)
+print("a % b =", a % b)
+print("a ** b =", a ** b)
+
+# Comparison
+print("\nComparison Operators")
+print("a == b:", a == b)
+print("a != b:", a != b)
+print("a > b:", a > b)
+print("a < b:", a < b)
+print("a >= b:", a >= b)
+print("a <= b:", a <= b)
+
+# Logical
+print("\nLogical Operators")
+print("(a > 5) and (b < 5):", (a > 5) and (b < 5))
+print("(a > 5) or (b > 5):", (a > 5) or (b > 5))
+print("not(a > 5):", not(a > 5))
+
+# Membership
+print("\nMembership Operators")
+text = "Python"
+print("'P' in text:", 'P' in text)
+print("'z' not in text:", 'z' not in text)
+
+# Identity
+print("\nIdentity Operators")
+x = a
+print("x is a:", x is a)
+print("x is not b:", x is not b)
+
+# Bitwise
+print("\nBitwise Operators")
+print("a & b =", a & b)
+print("a | b =", a | b)
+print("a ^ b =", a ^ b)
+print("~a =", ~a)
+print("a << 1 =", a << 1)
+print("a >> 1 =", a >> 1)
