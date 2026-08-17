@@ -1,0 +1,106 @@
+# List Creation
+my_list = [10, 20, 30, 40, 50]
+print("Original List:", my_list)
+
+my_list.append(60)
+print("After append:", my_list)
+
+my_list.insert(2, 25)
+print("After insert:", my_list)
+
+my_list.remove(40)
+print("After remove:", my_list)
+
+my_list.pop()
+print("After pop:", my_list)
+
+my_list.sort()
+print("After sort:", my_list)
+
+my_list.reverse()
+print("After reverse:", my_list)
+
+print("Length:", len(my_list))
+
+# Tuple Creation
+my_tuple = (10, 20, 30, 20, 40)
+
+print("Tuple:", my_tuple)
+
+print("Count of 20:", my_tuple.count(20))
+print("Index of 30:", my_tuple.index(30))
+print("Length:", len(my_tuple))
+print("Maximum:", max(my_tuple))
+print("Minimum:", min(my_tuple))
+
+# Set Creation
+my_set = {10, 20, 30, 40}
+print("Original Set:", my_set)
+
+my_set.add(50)
+print("After add:", my_set)
+
+my_set.remove(20)
+print("After remove:", my_set)
+
+my_set.discard(100)
+print("After discard:", my_set)
+
+set2 = {30, 40, 50, 60}
+
+print("Union:", my_set.union(set2))
+print("Intersection:", my_set.intersection(set2))
+print("Difference:", my_set.difference(set2))
+
+# Dictionary Creation
+student = {
+    "name": "Drashti",
+    "age": 18,
+    "course": "Computer Engineering"
+}
+
+print("Original Dictionary:", student)
+
+# Accessing values
+print("Name:", student["name"])
+
+# Adding a new item
+student["city"] = "Surat"
+print("After adding city:", student)
+
+# Updating a value
+student["age"] = 19
+print("After updating age:", student)
+
+# Built-in Methods
+print("Keys:", student.keys())
+print("Values:", student.values())
+print("Items:", student.items())
+
+# Remove an item
+student.pop("city")
+print("After pop:", student)
+
+print("Length:", len(student))
+
+# String Creation
+text = "Python Programming"
+
+print("Original String:", text)
+
+# Built-in Methods
+print("Uppercase:", text.upper())
+print("Lowercase:", text.lower())
+print("Title:", text.title())
+print("Length:", len(text))
+print("Replace:", text.replace("Python", "Java"))
+print("Find 'Programming':", text.find("Programming"))
+print("Starts with Python:", text.startswith("Python"))
+print("Ends with Programming:", text.endswith("Programming"))
+
+# Split
+print("Split:", text.split())
+
+# Strip
+text2 = "  Hello Python  "
+print("After strip:", text2.strip())
